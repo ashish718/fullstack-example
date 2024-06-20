@@ -1,0 +1,45 @@
+//add user direct only with email
+curl --location 'localhost:8000/user/add' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email":"123goyal.ashish062@gmail.com"  
+}'
+
+//get user detail
+curl --location --request GET 'localhost:8000/user/detail?email=goyal.ashish062%40gmail.com' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "email":"test@test.com",
+ "otp":2144   
+}'
+
+//user update
+curl --location 'localhost:8000/user/update' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email":"goyal.ashish062@gmail.com",
+    "balance": 10000,
+    "name": "AB devil",
+    "account_no": "xxxxxxxxx1234",
+    "bank_name": "Sahi Bank",
+    "phone": "+31 7262-437-298"
+}'
+
+//add transaction
+curl --location 'localhost:8000/user/transaction/add' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email":"goyal.ashish062@gmail.com",
+    "amount":2999,
+    "type": "credit",
+    "merchant": "test funds"
+}'
+
+
+//get user transaction 
+curl --location --request GET 'localhost:8000/user/transaction?email=goyal.ashish062%40gmail.com' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "email":"test@test.com",
+ "otp":2144   
+}'

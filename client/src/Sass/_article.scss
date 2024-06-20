@@ -1,0 +1,120 @@
+article {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+
+  .art-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile-sm {
+      width: 100%;
+      align-items: center;
+    }
+
+    @include media-lg {
+      width: 80%;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: $Dark_Blue;
+      margin-bottom: 3rem;
+      @include mobile-sm {
+        font-size: 2rem;
+        width: 70%;
+        text-align: center;
+      }
+
+      @include mobile-md {
+        font-size: 3rem;
+      }
+
+      @include media-lg {
+        text-align: left;
+      }
+    }
+
+    .article {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // background-color: teal;
+      column-gap: 1rem;
+      width: 100%;
+
+      @include mobile-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        row-gap: 1rem;
+      }
+
+      @include mobile-md {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        row-gap: 1rem;
+        // background-color: yellow;
+        // justify-content: space-around;
+      }
+
+      @include media-lg {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+.art-item {
+  width: 90%;
+  // height: 20rem;
+  margin: 0.7rem auto;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  font-size: 1.2rem;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0px 3px 12px rgb(0, 0, 0, 15%);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 13rem;
+  }
+
+  p {
+    color: gray;
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+
+    // padding: 1rem 0;
+  }
+}
+
+.art-item img {
+  width: 100%;
+}
+
+.a-item {
+  padding: 0.7rem;
+  font-size: 1rem;
+
+  h3 {
+    margin: 0.8rem 0;
+    color: $Dark_Blue;
+  }
+
+  .authur {
+    font-size: 14px;
+    color: $Dark_Blue;
+  }
+}

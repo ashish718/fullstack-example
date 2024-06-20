@@ -1,0 +1,162 @@
+.service {
+  width: 100%;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.8rem;
+
+  .container-sec {
+    width: 80%;
+    // background-color: slategray;
+
+    @include mobile-sm {
+      width: 100%;
+      align-items: center;
+    }
+
+    @include media-lg {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // background-color: indianred;
+    }
+  }
+}
+
+.sec-intro {
+  display: flex;
+  flex-direction: column;
+  // background-color: aqua;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  @include mobile-sm {
+    align-items: center;
+  }
+
+  @include media-lg {
+    align-items: flex-start;
+  }
+
+  h1 {
+    color: $Dark_Blue;
+
+    @include mobile-md {
+      text-align: left;
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    width: 40%;
+    margin: 1rem 0;
+
+    @include mobile-sm {
+      width: 90%;
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0.7rem;
+    }
+
+    @include mobile-md {
+      width: 80%;
+      margin: 1rem auto;
+      font-size: 1.5rem;
+      color: gray;
+      text-align: left;
+    }
+    @include media-lg {
+      width: 60%;
+      font-size: 1.5rem;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+}
+
+.sec-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // justify-content: space-between;
+  margin-top: 1rem;
+
+  @include mobile-sm {
+    // width: 90%;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    // background-color: green;
+  }
+
+  @include mobile-md {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @include media-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sec-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 229, 229);
+    padding: 0.4rem;
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 3px 12px rgb(0, 0, 0, 15%);
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    @include mobile-sm {
+      align-items: center;
+      text-align: center;
+    }
+
+    @include mobile-md {
+      align-items: start;
+      text-align: left;
+      border-radius: 15px;
+    }
+
+    @include media-lg {
+      align-items: flex-start;
+      text-align: left;
+      border-radius: 0;
+      background-color: white;
+    }
+
+    img {
+      padding: 1rem 0;
+    }
+    h3 {
+      padding: 1rem 0;
+      color: $Dark_Blue;
+      @include mobile-md {
+        font-size: 2rem;
+      }
+      @include media-lg {
+        color: $Dark_Blue;
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      padding: 1rem 0;
+      color: rgb(98, 105, 105);
+      @include mobile-sm {
+        width: 80%;
+      }
+
+      @include mobile-md {
+        font-size: 1.3rem;
+        width: 100%;
+      }
+
+      @include media-lg {
+        width: 98%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
